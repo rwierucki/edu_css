@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+.item {
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.item1 {
+    background-color: greenyellow;
+}
+.item2 {
+    background-color: blue;
+}
+.item3 {
+    background-color: orangered;
+}
+.item4 {
+    background-color: fuchsia;
+}
+.item5 {
+    background-color: grey;
+}
+.item6 {
+    background-color: yellow;
+}
+.item7 {
+    background-color: darkblue
+    ;
+}
+.item8 {
+    background-color: darkcyan
+    ;
+}
+.item9 {
+    background-color: darkkhaki
+    ;
+}
+.item10 {
+    background-color: darksalmon
+    ;
+}
+
+section.section1 {
+
+    display: flex;
+    display: none;
+    /* flex-direction: row; /* main axis ->            cross axis \> */
+    /* flex-direction: column;  */
+    /* flex-wrap: wrap; */ /* elementy spadaja na dół jak się nie mieszczą */
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: space-around; /* przestrań miedy elementami - wolne miejsce  -*/
+    /* justify-content: space-between; */
+    /* flex-direction: column; /* układ w pionie */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    /* os cross axis */
+    height: 30vh;
+
+    align-items: center; /* rozmieszczenie elementow na srodku poziom/pion */
+    /* align-content: center; /* uzywane gdy jest kilka rzedów flex-wrap: wrap*/
+    align-content: space-around;
+
+
+
+}
+.section1 div.item {
+    /* width: 33.33%; */
+    color: red;
+
+}
+.section1 div.item10 {
+    /* width: 100%; */
+    color: red;
+}
+
+/* flex-grow */  /* */
+.section1 .item {
+    flex-grow: 1;
+}
+.section1 .item1 {
+    flex-grow: 2; /* item1 2 razy wiekszy od wszystkich - elementy nie powinny miec ustawionej stalej szerekosci */
+}
+
+
+
+
+
+section.section2 {
+    display: flex;
+}
+
+.section2 .item {
+    flex-basis: 300px; /* wyjsciowa szerokosc */
+}
+.section2 .item1 {
+    /*flex-grow: 2;  /* zajmowanie wolnej przestrzeni  2razy wiecej niz item2*/
+    color: red;
+}
+.section2 .item2 {
+   /* flex-grow: 1; */
+   color: red;
+}
+
+/* flex-shrink */ /* zmiejszanie elementu gdy sie nie mieszcza */
+
+.section2 .item1 {
+    flex-basis: 500px;
+    flex-shrink: 2;  /* zmniejsza sie 2razy bardziej niz item2*/
+}
+.section2 .item2 {
+    flex-basis: 500px;
+    flex-shrink: 1;
+}
+
+/* skrótowy zapis */
+.section2 .item1 {
+    flex: 2 2 300px;
+    /* zwieksza sie  2 razy bardziej gdy jest pusta przestrzen oraz zmniejsza sie 2razy bardziej niz item2 w momencie gdy brakuje szerokosci*/
+}
+.section2 .item2 {
+    flex: 1 1 300px;
+}
+
+
+/* align-self */

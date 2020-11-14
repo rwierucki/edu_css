@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: 0 0 10px #180202 ;
+    border-radius: 5px;
+}
+/* menu */
+.site-nav {
+    height: 20px;
+    width: 100%;
+    background-color: #cecece;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.site-nav-trigger {
+    border: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.site-menu {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: -300px;
+    height: 100%;
+    width: 300px;
+    background-color: #171819;
+    transform: translateX(100%);
+    transition: 0.5s transform ease-in-out;
+}
+.site-menu ul {
+    padding: 0;
+    list-style: none;
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+.site-menu li {
+    display: flex;
+    background-color: brown;
+    margin-top: 20px;
+    color: burlywood;
+    border-radius: 5px;
+    flex-basis: 100%;
+}
+.site-menu a {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    height: 30px;
+
+}
+.site-menu a:hover {
+    background-color: cornsilk;
+    color: darkblue;
+}
+.site-nav-trigger:focus ~ .site-menu, .site-menu:hover {
+    transform: translateX(-300px);
+}
+
+/* flex -roman */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation li {
+    display: inline-flex;
+}
+.navigation button {
+    height: 50px;
+}
+
+/* hamburger - koduje*/
+footer {
+    background-color: slategray;
+    /* display: flex;
+    align-items: center;
+    align-content: center; */
+}
+.hamburger {
+    margin: 0 auto;
+    display: flex;
+    height: 35px;
+    width: 40px;
+    background-color: transparent;
+    border: 0;
+    border-top: 5px solid #180202;
+    /* background-color: aqua; */
+    position: relative;
+    transition: .3s transform linear;
+    outline: none;
+    /* outline: 2px solid salmon; */
+}
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid #180202;
+    transform: translateY(10px);
+}
+.hamburger::after {
+    transform: translateY(25px);
+    transition: .3s transform linear;
+}
+
+.hamburger:focus {
+    transform: rotate(45deg) translateY(5px) ;
+    border: 0;
+}
+.hamburger:focus::after {
+    transform: rotate(-90deg) translateX(-10px);
+}
+
+
+
+
